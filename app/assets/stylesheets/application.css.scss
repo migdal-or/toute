@@ -7,3 +7,12 @@ $nprogress-color: #B0454C;
 @import 'nprogress';
 @import 'nprogress-bootstrap';
 #nprogress .bar { height: 5px !important; }
+
+.operation {
+  border:1px solid;
+}
+
+.tout_in_brief {
+  border:1px solid;
+  box-shadow: 10px 10px 5px #888888
+}

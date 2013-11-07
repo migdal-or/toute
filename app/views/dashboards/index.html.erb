@@ -1,3 +1,14 @@
 <h1 class="title">Все продай - купи курай!</h1>
 
-<p>тут будут последнии обновления объяв</p>
+<!-- <p>тут будут последнии обновления объяв</p> -->
+<% Operation.all.each do |operation| %>
+	<div class="operation">
+		<%= link_to operation.name, touts_path(operation:operation.alias, city: params[:city]) %><br>
+		<% operation.touts.order("id").limit(2).each do |tout| %>
+			<div class="tout_in_brief">
+				<%= tout.name %>
+				<p><%= tout.content %></p>
+			</div>
+		<% end %>
+	</div>
+<% end %>
